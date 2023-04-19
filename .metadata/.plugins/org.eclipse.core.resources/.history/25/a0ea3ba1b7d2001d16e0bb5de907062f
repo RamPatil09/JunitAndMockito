@@ -1,0 +1,16 @@
+package com.xworkz.springin5steps.basics.basics;
+
+import org.junit.Test;
+import org.springframework.test.context.ContextConfiguration;
+
+@ContextConfiguration(BasicsApplication.class)
+public class BinarySearchTest {
+
+	BinarySearchImpl binarySearchImpl;
+	@Test
+	public void basicTest() {
+		
+		
+	}
+
+}

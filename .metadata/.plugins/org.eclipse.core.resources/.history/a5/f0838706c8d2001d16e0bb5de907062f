@@ -1,0 +1,31 @@
+package com.xworkz.springin5steps.basics.basics;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import com.xworkz.springin5steps.cdi.CdiApplication;
+import com.xworkz.springin5steps.cdi.SomeCdiBusiness;
+
+//Load the context
+@RunWith(SpringRunner.class)
+@ContextConfiguration(classes = CdiApplication.class)
+public class SomeCdiBusinessTest {
+	// Getting this bean from the context
+	@Autowired
+	private SomeCdiBusiness businessTest;
+
+	@Test
+	public void basicTest() {
+		// calling method on binary search
+		int actualValue = businessTest.findGreatest();
+
+		// check if the value is correct
+		assertEquals(10, actualValue);
+	}
+
+}

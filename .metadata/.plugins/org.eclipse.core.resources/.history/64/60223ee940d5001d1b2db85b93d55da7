@@ -1,0 +1,9 @@
+package com.xworkz.practicespringboot.SairaTravels;
+
+public class CustomerDto {
+
+	private long id;
+	private String name;
+	private long age;
+	private String sex;
+}

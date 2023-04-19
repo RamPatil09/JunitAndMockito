@@ -1,0 +1,10 @@
+package com.xworkz.practicespringboot.SairaTravels;
+
+import java.util.List;
+
+public class SairaTravelsController {
+
+	public List<CustomerDto> retriveAllDatas(){
+		return ;
+	}
+}

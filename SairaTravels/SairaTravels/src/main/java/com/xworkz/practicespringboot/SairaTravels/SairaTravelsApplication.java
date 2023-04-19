@@ -1,0 +1,13 @@
+package com.xworkz.practicespringboot.SairaTravels;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SairaTravelsApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SairaTravelsApplication.class, args);
+	}
+
+}

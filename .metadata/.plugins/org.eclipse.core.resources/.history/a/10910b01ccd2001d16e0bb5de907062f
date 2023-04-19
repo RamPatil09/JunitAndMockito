@@ -1,0 +1,33 @@
+package com.xworkz.springin5steps.basics.basics;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mockito;
+import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.xworkz.springin5steps.cdi.SomeCdiBusiness;
+import com.xworkz.springin5steps.cdi.SomeCdiDao;
+
+//Load the context
+@RunWith(MockitoJUnitRunner.class)
+public class SomeCdiBusinessTestWithMockito {
+	// Getting this bean from the context
+	@Autowired
+	private SomeCdiBusiness businessTest;
+
+	private SomeCdiDao daoMock;
+
+	@Test
+	public void basicTest() {
+		Mockito.when(daoMock.getData()).thenReturn(new int[] { 2, 4 });
+		// calling method on binary search
+		int actualValue = businessTest.findGreatest();
+
+		// check if the value is correct
+		assertEquals(4, actualValue);
+	}
+
+}

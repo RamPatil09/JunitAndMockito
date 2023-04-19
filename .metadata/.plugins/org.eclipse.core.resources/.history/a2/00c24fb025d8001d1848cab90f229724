@@ -1,0 +1,13 @@
+package com.xworkz.atm.AtmMachine;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class AtmMachineApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(AtmMachineApplication.class, args);
+	}
+
+}

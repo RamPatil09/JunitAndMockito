@@ -1,0 +1,11 @@
+package com.xworkz.atm.AtmMachine;
+
+import java.util.Scanner;
+
+public class AtmController {
+
+	public void userlogin() {
+		Scanner sc = new Scanner(System.in);
+				
+	}
+}

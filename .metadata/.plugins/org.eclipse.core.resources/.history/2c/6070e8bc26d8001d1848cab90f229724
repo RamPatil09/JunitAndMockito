@@ -1,0 +1,19 @@
+package com.xworkz.atm.AtmMachine;
+
+import java.util.Scanner;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class AtmController {
+
+	@RequestMapping("userDetails")
+	public void userlogin() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Welcome to the ATM");
+		System.out.println("Select the Language");
+		System.out.println("1 for English \n 2 for ಕನ್ನಡ");
+		int languageSelection = sc.nextInt();
+	}
+}

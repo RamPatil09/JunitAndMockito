@@ -1,0 +1,42 @@
+package com.xworkz.springin5steps.basics.basics;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.junit.MockitoJUnitRunner;
+
+import com.xworkz.springin5steps.cdi.SomeCdiBusiness;
+import com.xworkz.springin5steps.cdi.SomeCdiDao;
+
+//Load the context
+@RunWith(MockitoJUnitRunner.class)
+public class SomeCdiBusinessTestWithMockito {
+	@InjectMocks
+	private SomeCdiBusiness businessTest;
+
+	@Mock
+	private SomeCdiDao daoMock;
+
+	@Test
+	public void basicTestScenario() {
+		Mockito.when(daoMock.getData()).thenReturn(new int[] { 2, 4 });
+		assertEquals(4, businessTest.findGreatest());
+	}
+
+	@Test
+	public void basicTestScenario_withoutElements() {
+		Mockito.when(daoMock.getData()).thenReturn(new int[] {});
+		assertEquals(Integer.MIN_VALUE, businessTest.findGreatest());
+	}
+	
+	@Test
+	public void basicTestScenario_EqualElements() {
+		Mockito.when(daoMock.getData()).thenReturn(new int[] {});
+		assertEquals(Integer.MIN_VALUE, businessTest.findGreatest());
+	}
+
+}

@@ -1,0 +1,6 @@
+server.port=8099
+spring.profile.active=prod
+
+currency-service.url=http://default.xworkz.com
+currency-service.username=defaultUsername
+currency-service.key=defaultKey

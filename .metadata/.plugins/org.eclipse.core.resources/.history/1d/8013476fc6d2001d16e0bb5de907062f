@@ -1,0 +1,29 @@
+package com.xworkz.springin5steps.cdi;
+
+import javax.inject.Inject;
+import javax.inject.Named;
+
+@Named
+public class SomeCdiBusiness {
+	@Inject
+	private SomeCdiDao cdiDao;
+
+	public SomeCdiDao getCdiDao() {
+		return cdiDao;
+	}
+
+	public void setCdiDao(SomeCdiDao cdiDao) {
+		this.cdiDao = cdiDao;
+	}
+
+	public int findGreatest() {
+		int greatest = Integer.MIN_VALUE;
+		int[] datas = cdiDao.getData();
+		
+		for(int data:datas) {
+			if(data>greatest) {
+				greatest=data;
+			}
+		}
+	}
+}

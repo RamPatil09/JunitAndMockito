@@ -1,0 +1,7 @@
+server.port=8099
+logging.log.org.springframework=trace
+
+
+currency-service.url=http://dev.xworkz.com
+currency-service.username=devUsername
+currency-service.key=devKey
